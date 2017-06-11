@@ -1,0 +1,343 @@
+object Form2: TForm2
+  Left = 84
+  Top = 124
+  Width = 1195
+  Height = 900
+  Caption = 'Form2'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 120
+  TextHeight = 16
+  object DBChart1: TDBChart
+    Left = 56
+    Top = 16
+    Width = 985
+    Height = 257
+    BackWall.Brush.Color = clWhite
+    BackWall.Brush.Style = bsClear
+    Title.Text.Strings = (
+      'Volume')
+    LeftAxis.ExactDateTime = False
+    LeftAxis.StartPosition = 10.000000000000000000
+    LeftAxis.EndPosition = 90.000000000000000000
+    Legend.LegendStyle = lsValues
+    Legend.ResizeChart = False
+    Legend.Visible = False
+    View3D = False
+    TabOrder = 0
+    object Series1: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.BackColor = 64
+      Marks.Visible = False
+      DataSource = NS3P_500
+      SeriesColor = clRed
+      Title = 'Volume'
+      XLabelsSource = 'TM'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = True
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      XValues.ValueSource = 'TM'
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      YValues.ValueSource = 'VOLUME'
+    end
+    object Series4: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = False
+      DataSource = NS3P_600
+      SeriesColor = clRed
+      Title = 'Volume'
+      XLabelsSource = 'TM'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = True
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      XValues.ValueSource = 'TM'
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      YValues.ValueSource = 'VOLUME'
+    end
+    object Series2: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = False
+      DataSource = NS2P_500
+      SeriesColor = clRed
+      Title = 'Volume'
+      XLabelsSource = 'TM'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = True
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      XValues.ValueSource = 'TM'
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      YValues.ValueSource = 'VOLUME'
+    end
+    object Series3: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = False
+      DataSource = NS2P_600
+      SeriesColor = clRed
+      Title = 'Volume'
+      XLabelsSource = 'TM'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = True
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      XValues.ValueSource = 'TM'
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      YValues.ValueSource = 'VOLUME'
+    end
+  end
+  object DBChart2: TDBChart
+    Left = 56
+    Top = 288
+    Width = 985
+    Height = 257
+    BackWall.Brush.Color = clWhite
+    BackWall.Brush.Style = bsClear
+    Title.Text.Strings = (
+      'Speed')
+    LeftAxis.StartPosition = 10.000000000000000000
+    LeftAxis.EndPosition = 90.000000000000000000
+    Legend.Visible = False
+    View3D = False
+    TabOrder = 1
+    object LineSeries1: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = False
+      DataSource = NS3P_500
+      SeriesColor = 4259584
+      Title = 'Speed'
+      XLabelsSource = 'TM'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = True
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      XValues.ValueSource = 'TM'
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      YValues.ValueSource = 'SPEED'
+    end
+    object Series5: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = False
+      DataSource = NS3P_600
+      SeriesColor = 4259584
+      Title = 'Speed'
+      XLabelsSource = 'TM'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = True
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      XValues.ValueSource = 'TM'
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      YValues.ValueSource = 'SPEED'
+    end
+    object Series6: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = False
+      DataSource = NS2P_500
+      SeriesColor = 4259584
+      Title = 'Speed'
+      XLabelsSource = 'TM'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = True
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      XValues.ValueSource = 'TM'
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      YValues.ValueSource = 'SPEED'
+    end
+    object Series7: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = False
+      DataSource = NS2P_600
+      SeriesColor = 4259584
+      Title = 'Speed'
+      XLabelsSource = 'TM'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = True
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      XValues.ValueSource = 'TM'
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      YValues.ValueSource = 'SPEED'
+    end
+  end
+  object DBChart3: TDBChart
+    Left = 56
+    Top = 560
+    Width = 985
+    Height = 257
+    BackWall.Brush.Color = clWhite
+    BackWall.Brush.Style = bsClear
+    Title.Text.Strings = (
+      'Presure')
+    LeftAxis.StartPosition = 10.000000000000000000
+    LeftAxis.EndPosition = 90.000000000000000000
+    Legend.Visible = False
+    View3D = False
+    TabOrder = 2
+    object LineSeries3: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = False
+      DataSource = NS3P_500
+      SeriesColor = 16744448
+      Title = 'Presure'
+      XLabelsSource = 'TM'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = True
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      XValues.ValueSource = 'TM'
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      YValues.ValueSource = 'PRESURE'
+    end
+    object LineSeries4: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = False
+      DataSource = NS3P_600
+      SeriesColor = 16744448
+      Title = 'Presure'
+      XLabelsSource = 'TM'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = True
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      XValues.ValueSource = 'TM'
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      YValues.ValueSource = 'PRESURE'
+    end
+  end
+  object Button1: TButton
+    Left = 1072
+    Top = 392
+    Width = 75
+    Height = 25
+    Caption = 'CLOSE'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object NS3P_500: TIBQuery
+    Database = Form1.IBDatabase1
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    SQL.Strings = (
+      
+        'select NS3_5."TIME" as TM, NS3_5.VOLUME, NS3_5.SPEED, NS3_5.PRES' +
+        'URE'
+      'from NS3P_500_VOL NS3_5')
+    Left = 1080
+    Top = 208
+  end
+  object NS3P_600: TIBQuery
+    Database = Form1.IBDatabase1
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    SQL.Strings = (
+      
+        'select NS3_6."TIME"  as TM, NS3_6.VOLUME, NS3_6.SPEED, NS3_6.PRE' +
+        'SURE'
+      'from NS3P_600_VOL NS3_6')
+    Left = 1080
+    Top = 248
+  end
+  object NS2P_600: TIBQuery
+    Database = Form1.IBDatabase1
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    SQL.Strings = (
+      
+        'select NS2_6."TIME"  as TM, NS2_6.VOLUME, NS2_6.SPEED, NS2_6.PRE' +
+        'SURE'
+      'from NS2P_600_VOL NS2_6')
+    Left = 1080
+    Top = 168
+  end
+  object NS2P_500: TIBQuery
+    Database = Form1.IBDatabase1
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    SQL.Strings = (
+      
+        'select NS2_5."TIME"  as TM, NS2_5.VOLUME, NS2_5.SPEED, NS2_5.PRE' +
+        'SURE'
+      'from NS2P_500_VOL NS2_5')
+    Left = 1080
+    Top = 128
+  end
+  object IBTransaction1: TIBTransaction
+    Active = True
+    DefaultDatabase = Form1.IBDatabase1
+    AutoStopAction = saNone
+    Left = 1080
+    Top = 88
+  end
+end

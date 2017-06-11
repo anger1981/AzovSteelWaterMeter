@@ -1,0 +1,131 @@
+object Read_azovstal_ftp: TRead_azovstal_ftp
+  OldCreateOrder = False
+  DisplayName = 'Read_azovstal_ftp'
+  OnStart = ServiceStart
+  Left = 192
+  Top = 107
+  Height = 500
+  Width = 587
+  object IBDatabase1: TIBDatabase
+    Connected = True
+    DatabaseName = 'mvk1:F:\Base\azovstal\AZOVSTAL_WM.GDB'
+    Params.Strings = (
+      'User_Name=SYSDBA'
+      'Password=crjhjktnj'
+      'lc_ctype=win1251'
+      'no_garbage_collect 1')
+    LoginPrompt = False
+    IdleTimer = 0
+    SQLDialect = 3
+    TraceFlags = []
+    Left = 56
+    Top = 120
+  end
+  object IBTransaction1: TIBTransaction
+    Active = False
+    DefaultDatabase = IBDatabase1
+    AutoStopAction = saNone
+    Left = 112
+    Top = 120
+  end
+  object Timer_BD: TTimer
+    Interval = 5000
+    OnTimer = Timer_BDTimer
+    Left = 192
+    Top = 120
+  end
+  object Timer_FTP: TTimer
+    Interval = 20000
+    OnTimer = Timer_FTPTimer
+    Left = 192
+    Top = 16
+  end
+  object ftp: TIdFTP
+    MaxLineAction = maException
+    ReadTimeout = 0
+    ProxySettings.ProxyType = fpcmNone
+    ProxySettings.Port = 0
+    Left = 296
+    Top = 16
+  end
+  object NS3P_500: TIBSQL
+    Database = IBDatabase1
+    ParamCheck = True
+    SQL.Strings = (
+      'INSERT INTO NS3P_500_VOL ('
+      'ID, '
+      '"TIME", '
+      'VOLUME, '
+      'PRESURE, '
+      'SPEED) '
+      'VALUES ('
+      'NULL,'
+      ':DT , '
+      ':p623,'
+      ':p621, '
+      ':p622)')
+    Transaction = IBTransaction1
+    Left = 192
+    Top = 192
+  end
+  object NS3P_600: TIBSQL
+    Database = IBDatabase1
+    ParamCheck = True
+    SQL.Strings = (
+      'INSERT INTO NS3P_600_VOL ('
+      'ID, '
+      '"TIME", '
+      'VOLUME, '
+      'PRESURE, '
+      'SPEED) '
+      'VALUES ('
+      'NULL,'
+      ':DT , '
+      ':p625,'
+      ':p1067, '
+      ':p624)')
+    Transaction = IBTransaction1
+    Left = 192
+    Top = 240
+  end
+  object NS2P_500: TIBSQL
+    Database = IBDatabase1
+    ParamCheck = True
+    SQL.Strings = (
+      'INSERT INTO NS2P_500_VOL ('
+      'ID, '
+      '"TIME", '
+      'VOLUME, '
+      'PRESURE, '
+      'SPEED) '
+      'VALUES ('
+      'NULL,'
+      ':DT , '
+      ':p229,'
+      'NULL, '
+      ':p228)')
+    Transaction = IBTransaction1
+    Left = 192
+    Top = 288
+  end
+  object NS2P_600: TIBSQL
+    Database = IBDatabase1
+    ParamCheck = True
+    SQL.Strings = (
+      'INSERT INTO NS2P_600_VOL ('
+      'ID, '
+      '"TIME", '
+      'VOLUME, '
+      'PRESURE, '
+      'SPEED) '
+      'VALUES ('
+      'NULL,'
+      ':DT , '
+      ':p231,'
+      'NULL, '
+      ':p230)')
+    Transaction = IBTransaction1
+    Left = 192
+    Top = 336
+  end
+end
